@@ -7,6 +7,10 @@ let savebutton = document.getElementById("save-button");
 let editbutton = document.getElementById("edit-button");
 let forsave = document.getElementById("for-save");
 let foredit = document.getElementById("for-edit");
+let MusicBackground = document.getElementById("MusicBackground");
+let MusicType = document.getElementById("MusicType");
+let captionBtn = document.getElementById("captiontype-btn");
+let captionType = document.getElementById("captionType");
 
 captions.addEventListener("click", () => {
   videoTypeList.classList.remove("videotype-list");
@@ -42,4 +46,16 @@ savebutton.addEventListener("click", () => {
 editbutton.addEventListener("click", () => {
   forsave.classList.remove("active-caption");
   foredit.classList.add("active-caption");
+});
+MusicBackground.addEventListener("click", () => {
+  MusicBackground.style.background = "rgb(255 90 31 / 1)";
+  MusicBackground.style.color = "#fff";
+  MusicType.style.cursor = "pointer";
+  MusicType.disabled = false;
+});
+captionBtn.addEventListener("click", () => {
+  captionBtn.style.background = "rgb(255 90 31 / 1)";
+  captionBtn.style.color = "#fff";
+  captionType.style.cursor = "pointer";
+  captionType.disabled = false;
 });
